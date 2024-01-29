@@ -2,6 +2,18 @@
 Codes for my own implements and experiments on Contrastive Learning
 
 # Testing Result for *Center Loss Standard*
+
+## Objective
+This part is exploring the characteristics of different loss functions (CrossEntropyLoss &	CenterLoss) on finetuning the projection head of MoCo. The result indicates that the result of CenterLoss is better than CrossEntropyLoss when the dataset is not large enougLR_model_1e-3_LR_center_1e-2_lamda1
+
+## Training information
+1. ResNet is frozen and only projection head is trained
+2. learning-rate of model(projection head): 1e-3
+3. loss-function: Center Loss
+4. learning-rate of Center Loss: 1e-2
+5. Center Loss lamda: 1
+
+## Training and testing log
 ```
 Epoch 300/300
 Epoch: [300][ 1/28]	CrossEntropyLoss 0.0045 (0.0045)	CenterLoss 0.2327 (0.2327)	Loss 0.0278 (0.0278)	ceAcc@1 100.00 (100.00)	ceAcc@5 100.00 (100.00)	ceAcc@10 100.00 (100.00)
